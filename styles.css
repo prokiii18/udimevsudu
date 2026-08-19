@@ -51,7 +51,7 @@ footer{background:#fff}.footer-grid{display:grid;grid-template-columns:1.8fr rep
 .cards article>img{mix-blend-mode:multiply}
 .big-phone{display:flex;align-items:center;gap:12px;font-size:28px;letter-spacing:-.02em}.big-phone svg{width:27px;height:27px;flex:0 0 auto;fill:none;stroke:#d5a14a;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .social-links{display:flex;gap:10px;margin-top:24px}.social-link{display:flex;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid rgba(255,255,255,.22);border-radius:50%;color:#d3cec6;transition:color .35s ease,border-color .35s ease,background-color .35s ease}.social-link svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.social-link:hover{border-color:#d5a14a;background:#d5a14a;color:#171717}.social-link.is-placeholder{opacity:.72;cursor:default}.social-link.is-placeholder:hover{border-color:rgba(255,255,255,.22);background:transparent;color:#d3cec6}
-body,p,li,a,button,input,textarea,select,.eyebrow{font-family:Inter,Arial,sans-serif}h1,h2,h3,.card-bottom strong{font-family:'Playfair Display',Georgia,serif}.script-word,.hero-script{font-family:'Dancing Script',cursive;font-style:normal}
+body,p,li,a,button,input,textarea,select,.eyebrow{font-family:Inter,Arial,sans-serif}h1,h2,h3,.card-bottom strong{font-family:'Playfair Display',Georgia,serif}.script-word,.hero-script{font-family:'Caveat',cursive;font-style:normal}
 .benefit-card h3{font-size:21px;font-weight:700;line-height:1.2;color:#0b0b0a}
 .cards h3{font-size:21px;font-weight:700;line-height:1.2;color:#0b0b0a}
 .stat-icon{stroke:#171717}.stat-icon-map::before{background:#171717}
