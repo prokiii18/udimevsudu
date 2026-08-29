@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".header");
   const menuToggle = document.querySelector(".menu-toggle");
   const mobileMenu = document.querySelector(".mobile-menu");
-  const revealItems = document.querySelectorAll(".stat-item, .feature-block, .benefit-card, .cards article, .contact-shell");
+  const revealItems = document.querySelectorAll(".quick-heading, .quick-card, .feature-block, .benefit-card, .cards article, .contact-shell");
 
   const setMenu = (open) => {
     header.classList.toggle("menu-open", open);
