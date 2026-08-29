@@ -3,21 +3,37 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Udíme v sudu | Ručně vyráběné sudové udírny</title>
+  <title>Udíme v sudu</title>
   <meta name="description" content="Ručně vyráběné sudové udírny z Albrechtic. Poctivé zpracování, chytré řešení a jednoduché domácí uzení.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="header">
   <div class="wrap nav">
-    <a class="logo" href="#top"><span class="logo-mark">♨</span><span><b>UDÍME</b><br>V SUDU</span></a>
+    <a class="logo" href="#top"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 42 48"><path d="M11 17h20l-2 25H13L11 17Z"/><path d="M10 22h22M11.5 35h19M17 18l1 23M25 18l-1 23M15 12c-3-4 3-5 0-9M22 12c-3-4 3-5 0-9M29 12c-3-4 3-5 0-9"/></svg></span><span><b>UDÍME</b><br>V SUDU</span></a>
     <nav>
       <a href="#top">Úvod</a><a href="#udirna">Udírna</a><a href="#vyhody">Výhody</a><a href="#produkty">Ceník</a><a href="#kontakt">Kontakt</a>
     </nav>
     <div class="nav-right"><a class="btn dark" href="#kontakt">Chci poradit</a></div>
+    <button class="menu-toggle" type="button" aria-label="Otevřít menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+      <span class="mobile-menu-label">Menu</span>
+      <nav aria-label="Mobilní navigace">
+        <a href="#top"><span>01</span>Úvod</a>
+        <a href="#udirna"><span>02</span>Udírna</a>
+        <a href="#vyhody"><span>03</span>Výhody</a>
+        <a href="#produkty"><span>04</span>Ceník</a>
+        <a href="#kontakt"><span>05</span>Kontakt</a>
+      </nav>
+      <a class="btn gold mobile-menu-cta" href="#kontakt">Chci poradit</a>
+    </div>
   </div>
 </header>
 
@@ -103,19 +119,40 @@
 
 <section class="contact" id="kontakt">
   <div class="wrap contact-shell">
-    <div class="contact-info"><div class="eyebrow">Nezávazná poptávka</div><h2>Máte zájem<br>o udírnu?</h2><p>Ozvěte se nám a domluvíme se na všem potřebném. Rádi poradíme s výběrem vhodné varianty.</p><a class="big-phone" href="tel:+420705358844"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 4h5l2 7-3 2c2 4 4 6 8 8l2-3 7 2v5c0 2-2 3-4 3C14 27 5 18 4 8c0-2 2-4 4-4Z"/></svg><span>705 358 844</span></a><a class="contact-email" href="mailto:info@udimevsudu.cz">info@udimevsudu.cz</a><div class="social-links"><span class="social-link is-placeholder" role="img" aria-label="Facebook"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M18 28V17h4l1-5h-5V9c0-2 1-3 3-3h3V2h-4c-5 0-7 3-7 7v3H9v5h4v11"/></svg></span><span class="social-link is-placeholder" role="img" aria-label="Instagram"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="4" width="24" height="24" rx="7"/><circle cx="16" cy="16" r="6"/><circle cx="24" cy="8" r="1"/></svg></span><a class="social-link" href="https://wa.me/420705358844" target="_blank" rel="noopener noreferrer" aria-label="Napsat na WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M27 15a11 11 0 0 1-16 10l-6 2 2-6A11 11 0 1 1 27 15Z"/><path d="M11 9h3l1 4-2 1c1 3 3 5 6 6l1-2 4 1v3c0 1-1 2-2 2-7-1-13-7-14-14 0-1 1-1 3-1Z"/></svg></a></div></div>
-    <form class="contact-form"><div class="row"><input type="text" placeholder="Jméno a příjmení"><input type="tel" placeholder="Telefon"></div><input type="email" placeholder="E-mail"><textarea rows="6" placeholder="Zpráva (volitelně)"></textarea><button class="btn gold" type="button">Odeslat poptávku</button></form>
+    <div class="contact-info">
+      <div class="eyebrow">Nezávazná poptávka</div>
+      <h2>Pojďme vybrat<br><span class="contact-script">vaši udírnu.</span></h2>
+      <p>Řekněte nám, co od udírny očekáváte. Poradíme s výběrem a domluvíme vše potřebné.</p>
+      <div class="contact-direct">
+        <span class="contact-direct-label">Raději osobně?</span>
+        <a class="big-phone" href="tel:+420705358844"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 4h5l2 7-3 2c2 4 4 6 8 8l2-3 7 2v5c0 2-2 3-4 3C14 27 5 18 4 8c0-2 2-4 4-4Z"/></svg><span>+420 705 358 844</span></a>
+        <a class="contact-email" href="mailto:davo.prokes@seznam.cz">davo.prokes@seznam.cz</a>
+      </div>
+      <div class="contact-note"><span></span>Ozveme se vám zpravidla do 24 hodin</div>
+    </div>
+    <form class="contact-form">
+      <div class="form-heading"><span>Vaše poptávka</span></div>
+      <div class="row">
+        <label><span>Jméno a příjmení</span><input type="text" name="name" autocomplete="name" placeholder="Jan Novák"></label>
+        <label><span>Telefon</span><input type="tel" name="phone" autocomplete="tel" placeholder="+420 000 000 000"></label>
+      </div>
+      <label><span>E-mail</span><input type="email" name="email" autocomplete="email" placeholder="vas@email.cz"></label>
+      <label><span>O jakou variantu máte zájem?</span><select name="product"><option value="">Ještě nevím, potřebuji poradit</option><option>Udírna bez generátoru</option><option>Udírna s generátorem</option><option>Podstavec</option></select></label>
+      <label><span>Vaše zpráva <em>volitelné</em></span><textarea name="message" rows="3" placeholder="Napište nám svou představu…"></textarea></label>
+      <div class="form-submit"><button class="btn gold" type="button">Odeslat poptávku <span>→</span></button><small>Odesláním souhlasíte se zpracováním údajů.</small></div>
+    </form>
   </div>
 </section>
 </main>
 
 <footer>
   <div class="wrap footer-grid">
-    <div><a class="logo" href="#top"><span class="logo-mark">♨</span><span><b>UDÍME</b><br>V SUDU</span></a><p>Ručně vyráběné sudové udírny z Albrechtic.</p></div>
-    <div><b>Udírna</b><a href="#udirna">Výhody</a><a href="#produkty">Ceník</a></div>
-    <div><b>Informace</b><a href="#vyhody">Proč naše udírny</a></div>
-    <div><b>Kontakt</b><a href="tel:+420705358844">705 358 844</a><a href="mailto:info@udimevsudu.cz">info@udimevsudu.cz</a></div>
+    <div class="footer-brand"><a class="logo" href="#top"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 42 48"><path d="M11 17h20l-2 25H13L11 17Z"/><path d="M10 22h22M11.5 35h19M17 18l1 23M25 18l-1 23M15 12c-3-4 3-5 0-9M22 12c-3-4 3-5 0-9M29 12c-3-4 3-5 0-9"/></svg></span><span><b>UDÍME</b><br>V SUDU</span></a><p>Poctivé sudové udírny.<br>Ručně vyráběné v Albrechticích.</p></div>
+    <div><b>Objevte</b><a href="#udirna">Naše udírna</a><a href="#vyhody">Výhody</a><a href="#produkty">Varianty a ceny</a></div>
+    <div><b>Informace</b><a href="#kontakt">Doprava a předání</a><a href="#kontakt">Nezávazná poptávka</a></div>
+    <div><b>Kontakt</b><a href="tel:+420705358844">+420 705 358 844</a><a href="mailto:davo.prokes@seznam.cz">davo.prokes@seznam.cz</a></div>
   </div>
+  <div class="wrap footer-bottom"><span>© 2026 Udíme v sudu</span><a href="#top">Zpět nahoru ↑</a></div>
 </footer>
 
 <script src="script.js"></script>
