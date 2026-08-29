@@ -201,3 +201,12 @@ section[id],main[id]{scroll-margin-top:88px}
 }
 
 @media(hover:none){.btn:active{transform:scale(.985)}.benefit-card:hover,.cards article:hover{transform:none}}
+
+/* Balanced contact details */
+.contact-direct .big-phone,.contact-direct .contact-email{display:flex;width:max-content;align-items:center;gap:10px;font-size:16px;line-height:1.4;letter-spacing:0}
+.contact-direct .big-phone{margin:0 0 10px;font-weight:600}
+.contact-direct .contact-email{font-weight:500}
+.contact-direct .big-phone svg,.contact-direct .contact-email svg{width:20px;height:20px;flex:0 0 auto;stroke-width:1.4}
+.contact-direct .social-links{margin-top:20px}
+
+@media(max-width:600px){.contact-direct .big-phone,.contact-direct .contact-email{font-size:16px;white-space:normal}}
