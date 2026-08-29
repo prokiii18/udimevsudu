@@ -210,3 +210,18 @@ section[id],main[id]{scroll-margin-top:88px}
 .contact-direct .social-links{margin-top:20px}
 
 @media(max-width:600px){.contact-direct .big-phone,.contact-direct .contact-email{font-size:16px;white-space:normal}}
+
+/* Refined checklist marks */
+.detail-section .feature-points::before{display:none}
+.detail-section .feature-points li::before,.cards li::before{content:"";top:50%;left:5px;width:6px;height:11px;border:0;border-right:1.5px solid #a56f29;border-bottom:1.5px solid #a56f29;border-radius:0;background:none;box-shadow:none;transform:translateY(-65%) rotate(45deg)}
+.detail-section .feature-points li,.detail-section .feature-points li:last-child,.cards li{padding-left:26px}
+
+@media(max-width:600px){
+  .hero .stats{background:#fff}
+  .hero .stat-item,.hero .stat-item:first-child,.hero .stat-item:last-child{grid-template-columns:42px 160px;text-align:center}
+  .header{border-bottom:0;box-shadow:0 5px 20px rgba(38,29,20,.055)}
+  .header::after{content:"";position:absolute;right:0;bottom:0;left:0;height:1px;background:linear-gradient(90deg,transparent 4%,rgba(193,141,56,.72) 50%,transparent 96%)}
+  .header .logo-mark{width:38px;height:38px;border:1px solid rgba(155,101,39,.22);border-radius:50%;background:#fbf8f2}
+  .header .logo-mark svg{width:25px;height:29px}
+  .header .menu-toggle{width:44px;height:44px;border-color:rgba(155,101,39,.34);box-shadow:0 4px 14px rgba(81,57,28,.08)}
+}
