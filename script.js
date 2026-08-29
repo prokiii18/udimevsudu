@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  if (window.lucide) window.lucide.createIcons();
+
   const header = document.querySelector(".header");
   const menuToggle = document.querySelector(".menu-toggle");
   const mobileMenu = document.querySelector(".mobile-menu");
