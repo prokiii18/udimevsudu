@@ -63,7 +63,8 @@ body,p,li,a,button,input,textarea,select,.eyebrow{font-family:Inter,Arial,sans-s
 @media(max-width:900px){.stats-band .stats{margin-top:0;margin-bottom:0}.stats-band .stat-item,.stats-band .stat-item:first-child,.stats-band .stat-item:last-child{border-bottom-color:rgba(255,255,255,.13)}}
 @media(max-width:900px){.detail-section .feature-block .feature-text,.detail-section .feature-block.reverse .feature-text{order:1}.detail-section .feature-block .feature-media,.detail-section .feature-block.reverse .feature-media{order:2}}
 @media(max-width:560px){.hero .actions{width:100%;margin-left:auto;margin-right:auto}.hero .actions .btn{text-align:center}}
-.detail-section .feature-block .feature-text,.detail-section .feature-block.reverse .feature-text{order:1}.detail-section .feature-block .feature-media,.detail-section .feature-block.reverse .feature-media{order:2}
+.detail-section .feature-block .feature-text{order:1}.detail-section .feature-block .feature-media{order:2}.detail-section .feature-block.reverse .feature-media{order:1}.detail-section .feature-block.reverse .feature-text{order:2}
+@media(max-width:900px){.detail-section .feature-block .feature-text,.detail-section .feature-block.reverse .feature-text{order:1}.detail-section .feature-block .feature-media,.detail-section .feature-block.reverse .feature-media{order:2}}
 
 /* Premium navigation and mobile menu */
 .menu-toggle,.mobile-menu{display:none}
@@ -79,9 +80,9 @@ body,p,li,a,button,input,textarea,select,.eyebrow{font-family:Inter,Arial,sans-s
 
 @media(max-width:900px){
   body.menu-is-open{overflow:hidden}
-  .header{z-index:100}
+  .header{z-index:100;background:#f7f5f0;backdrop-filter:none;-webkit-backdrop-filter:none}
   .nav{position:relative;z-index:2}
-  .menu-toggle{display:grid;width:46px;height:46px;margin-left:auto;padding:12px;border:1px solid rgba(23,23,23,.18);border-radius:50%;background:transparent;place-content:center;gap:5px;cursor:pointer}
+  .menu-toggle{display:grid;width:46px;height:46px;margin-left:auto;padding:12px;border:1px solid rgba(23,23,23,.2);border-radius:50%;background:#fff;box-shadow:0 4px 14px rgba(23,23,23,.1);place-content:center;gap:5px;cursor:pointer}
   .menu-toggle span{display:block;width:20px;height:1.5px;background:#171717;transition:transform .4s cubic-bezier(.22,1,.36,1),opacity .25s}
   .menu-open .menu-toggle span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
   .menu-open .menu-toggle span:nth-child(2){opacity:0;transform:scaleX(0)}
@@ -139,8 +140,9 @@ body,p,li,a,button,input,textarea,select,.eyebrow{font-family:Inter,Arial,sans-s
 .contact-direct{margin-top:48px;padding-top:26px;border-top:1px solid rgba(255,255,255,.12)}
 .contact-direct-label{display:block;margin-bottom:12px;color:#77736d;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
 .big-phone{width:max-content;margin:0 0 8px;font-family:Inter,Arial,sans-serif;font-size:30px;font-weight:650;line-height:1.2;letter-spacing:-.025em;font-variant-numeric:tabular-nums}
-.big-phone svg{width:23px;height:23px}.contact-email{font-size:14px}
+.big-phone svg{width:23px;height:23px}.contact-email{display:flex;width:max-content;align-items:center;gap:10px;color:#c9c5be;font-size:14px;transition:color .3s}.contact-email svg{width:21px;height:21px;flex:0 0 auto;fill:none;stroke:#d5a14a;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}.contact-email:hover{color:#fff}
 .contact-note{display:flex;align-items:center;gap:10px;margin-top:30px;color:#817d77;font-size:11px}.contact-note span{width:6px;height:6px;border-radius:50%;background:#84a66d;box-shadow:0 0 0 4px rgba(132,166,109,.1)}
+.contact-form .contact-note{margin:0 0 -4px;color:#96918a}
 .contact-form{padding:42px 44px;border:1px solid rgba(255,255,255,.13);background:rgba(12,12,11,.38);box-shadow:0 28px 70px rgba(0,0,0,.18);gap:25px}
 .form-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.12)}
 .form-heading span{font-family:'Playfair Display',Georgia,serif;font-size:25px}.form-heading small{color:#8f6730;font-size:9px;letter-spacing:.14em}
@@ -169,10 +171,10 @@ section[id],main[id]{scroll-margin-top:88px}
 
 /* Subtle smoke texture behind benefits */
 .benefits-section{overflow:hidden;background-color:#f2eee6;background-image:radial-gradient(circle at 8% 18%,rgba(193,141,56,.07),transparent 26%),radial-gradient(circle at 92% 78%,rgba(123,40,31,.035),transparent 30%)}
+.benefits-section .benefit-card{background:#fdfcf9}
 .benefits-section::after{content:"";position:absolute;z-index:0;inset:-50px;pointer-events:none;opacity:.24;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='700' viewBox='0 0 1440 700'%3E%3Cg fill='none' stroke='%23c6b69e' stroke-width='1'%3E%3Cpath d='M-80 530C95 430 88 286 238 216S423 76 365-42'/%3E%3Cpath d='M-42 610C148 505 150 348 292 282S489 115 432-34'/%3E%3Cpath d='M1480 110c-178 88-154 232-302 296s-185 174-119 326'/%3E%3Cpath d='M1515 32c-198 105-193 263-335 329s-195 168-139 318'/%3E%3C/g%3E%3C/svg%3E");background-position:center;background-size:cover;background-repeat:no-repeat;will-change:transform;animation:benefits-smoke-drift 10s ease-in-out infinite alternate}
 .benefits-section>.wrap{position:relative;z-index:1}
 @keyframes benefits-smoke-drift{from{transform:translate3d(-32px,18px,0)}to{transform:translate3d(32px,-18px,0)}}
-
 @media(max-width:600px){.benefits-section::after{opacity:.16;background-size:auto 100%;background-position:center}}
 @media(prefers-reduced-motion:reduce){.benefits-section::after{animation:none;transform:none}}
 
