@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
       cancelAnimationFrame(scrollAnimation);
 
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const headerOffset = header.offsetHeight + 12;
+      const headerOffset = header.offsetHeight;
       const targetY = hash === "#top"
         ? 0
         : Math.max(0, target.getBoundingClientRect().top + window.scrollY - headerOffset);
