@@ -182,7 +182,7 @@ section[id],main[id]{scroll-margin-top:88px}
 @media(max-width:600px){.contact-direct .big-phone,.contact-direct .contact-email{font-size:16px;white-space:normal}}
 
 /* Refined checklist marks */
-.cards li::before{content:"";top:50%;left:5px;width:6px;height:11px;border:0;border-right:1.5px solid #a56f29;border-bottom:1.5px solid #a56f29;border-radius:0;background:none;box-shadow:none;transform:translateY(-65%) rotate(45deg)}
+.cards li::before{content:"";position:absolute;top:50%;left:5px;width:6px;height:11px;border:0;border-right:1.5px solid #a56f29;border-bottom:1.5px solid #a56f29;border-radius:0;background:none;box-shadow:none;transform:translateY(-65%) rotate(45deg)}
 .cards li{padding-left:26px}
 
 @media(max-width:600px){
