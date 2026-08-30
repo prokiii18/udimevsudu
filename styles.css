@@ -348,3 +348,24 @@ section[id],main[id]{scroll-margin-top:88px}
   .hero-discover{bottom:10px;font-size:8px}
   .hero-discover svg{width:23px;height:23px}
 }
+
+/* Subtle hero and first-detail proportion polish */
+@media(min-width:1101px){.hero h1{font-size:63px}}
+@media(min-width:901px) and (max-width:1100px){.hero h1{font-size:53px}}
+@media(min-width:601px) and (max-width:900px){.hero h1{font-size:52px}}
+
+@media(min-width:601px){
+  .hero-discover{bottom:70px}
+  .hero .actions .btn:first-child{padding-right:27px;padding-left:27px}
+}
+
+@media(max-width:600px){.hero-discover{bottom:36px}}
+@media(max-width:600px) and (max-height:700px){.hero-discover{bottom:18px}}
+
+@media(min-width:901px){
+  #detail-start .feature-media{width:94%;justify-self:end}
+  #detail-start .feature-text{max-width:500px;transform:translateY(-32px)}
+  #detail-start .script-word{font-size:1.105em}
+  #detail-start .lead{max-width:490px}
+  #detail-start .feature-points{max-width:470px}
+}
