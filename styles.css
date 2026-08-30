@@ -313,9 +313,8 @@ section[id],main[id]{scroll-margin-top:88px}
 
 /* Lucide checks and refined separators */
 .detail-section .feature-points li::before{display:none}
-.feature-check{flex:0 0 auto;width:31px;height:31px;padding:7px;border:1px solid rgba(165,111,41,.28);border-radius:50%;background:#f6efe2;fill:none;stroke:#9b6527;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:background-color .25s,border-color .25s,transform .25s}
+.feature-check{flex:0 0 auto;width:31px;height:31px;padding:7px;border:1px solid rgba(165,111,41,.28);border-radius:50%;background:#f6efe2;fill:none;stroke:#9b6527;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .detail-section .feature-points li,.detail-section .feature-points li:last-child{display:flex;align-items:center;gap:14px;padding:9px 0;border:0;font-weight:550;line-height:1.45}
-@media(hover:hover){.detail-section .feature-points li:hover .feature-check{border-color:#a56f29;background:#eadcc3;transform:scale(1.06)}}
 @media(min-width:601px){
   .detail-section .feature-points li{padding:12px 0;border-bottom:1px solid #e5ded2}
   .detail-section .feature-points li:last-child{border-bottom:0}
