@@ -1,5 +1,5 @@
 :root{--bg:#f7f5f0;--white:#fff;--text:#171717;--muted:#69645e;--gold:#c18d38;--line:#ded9cf;--max:1180px;--font-body:Inter,Arial,sans-serif;--font-display:'Playfair Display',Georgia,serif;--font-accent:'Caveat',cursive}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif}img{display:block;width:100%}a{text-decoration:none;color:inherit}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif}img{display:block;width:100%;height:auto}a{text-decoration:none;color:inherit}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
 .header{position:sticky;top:0;z-index:20;background:rgba(247,245,240,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.05);transition:.25s}.header.scrolled{box-shadow:0 8px 30px rgba(0,0,0,.05)}.nav{height:76px;display:flex;align-items:center;gap:28px}.logo{display:flex;align-items:center;gap:10px;font-weight:600;line-height:.9}.logo-mark{font-size:30px;color:#7b281f}.nav nav{display:flex;gap:28px;margin-left:auto;font-size:13px;font-weight:600}.nav-right{display:flex;align-items:center;gap:18px;font-weight:700;font-size:14px}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 20px;border:1px solid transparent;border-radius:3px;text-transform:uppercase;font-size:12px;font-weight:700;transition:.2s}.btn:hover{transform:translateY(-2px)}.dark{background:#171717;color:#fff}.outline{border-color:#aaa39a;background:transparent}.gold{background:var(--gold);color:#fff}
 .hero{position:relative}.hero::before{content:"";position:absolute;inset:0 0 auto;height:640px;background-image:linear-gradient(90deg,rgba(10,12,8,.02) 22%,rgba(10,12,8,.28) 50%,rgba(10,12,8,.78) 76%,rgba(10,12,8,.9) 100%),url('herofoto.webp');background-size:cover;background-position:center 53%;background-repeat:no-repeat}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:54% 46%;min-height:640px}.hero-copy{grid-column:2;display:flex;flex-direction:column;justify-content:center;padding:40px 0 40px 46px;color:#fff}.hero h1{font-family:'Playfair Display',serif;font-size:66px;line-height:.98;letter-spacing:-.03em;margin:0 0 26px;text-shadow:0 3px 24px rgba(0,0,0,.3)}.hero-copy p{font-size:17px;line-height:1.7;color:rgba(255,255,255,.82);max-width:460px}.hero .btn.dark{background:#fff;color:#171717}.hero .btn.outline{color:#fff;border-color:rgba(255,255,255,.62);background:rgba(0,0,0,.12)}.actions{display:flex;gap:14px;margin-top:15px}
@@ -293,3 +293,12 @@ section[id],main[id]{scroll-margin-top:88px}
   #detail-start .lead{max-width:490px}
   #detail-start .feature-points{max-width:470px}
 }
+
+/* Expose the LCP image in HTML while preserving the established hero crop and overlays. */
+.hero-media{position:absolute;z-index:0;display:block;inset:0 0 auto;height:640px;overflow:hidden}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 53%}
+.hero::before{z-index:1;background-image:linear-gradient(90deg,rgba(10,12,8,.02) 22%,rgba(10,12,8,.28) 50%,rgba(10,12,8,.78) 76%,rgba(10,12,8,.9) 100%);pointer-events:none}
+.hero-grid{z-index:2}
+@media(min-width:901px){.hero-media{height:max(780px,calc(100svh - 76px))}}
+@media(max-width:900px){.hero-media{height:610px}.hero-media img{object-position:38% center}.hero::before{background-image:linear-gradient(90deg,rgba(8,10,7,.68),rgba(8,10,7,.78))}}
+@media(max-width:600px){.hero-media{height:calc(100svh - 70px)}.hero-media img{object-position:40% center}}

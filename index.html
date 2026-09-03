@@ -3,11 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 42 48'%3E%3Cg fill='none' stroke='%239b6527' stroke-width='2'%3E%3Cpath d='M11 17h20l-2 25H13L11 17Z'/%3E%3Cpath d='M10 22h22M11.5 35h19M17 18l1 23M25 18l-1 23'/%3E%3C/g%3E%3C/svg%3E">
   <title>Udíme v sudu</title>
   <meta name="description" content="Ručně vyráběné sudové udírny z Albrechtic. Poctivé zpracování, chytré řešení a jednoduché domácí uzení.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="herofoto.avif" type="image/avif" fetchpriority="high">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"></noscript>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -39,6 +42,10 @@
 
 <main id="top">
 <section class="hero">
+  <picture class="hero-media" aria-hidden="true">
+    <source srcset="herofoto.avif" type="image/avif">
+    <img src="herofoto.webp" alt="" width="1672" height="941" loading="eager" decoding="async" fetchpriority="high">
+  </picture>
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <h1><span class="hero-line">Ručně vyráběné</span><span class="hero-line">sudové udírny</span><span class="hero-line hero-script">z Albrechtic.</span></h1>
@@ -54,7 +61,7 @@
 
 <section class="section detail-section" id="udirna">
   <div class="wrap feature-block" id="detail-start">
-    <div class="feature-media"><img src="gene.webp" alt="Sudová udírna s generátorem a podstavcem" loading="lazy" decoding="async"></div>
+    <div class="feature-media"><img src="gene.avif" alt="Sudová udírna s generátorem a podstavcem" width="750" height="1000" loading="lazy" decoding="async"></div>
     <div class="feature-text">
       <div class="eyebrow">Praktické řešení</div>
       <h2>Jednoduchost <span class="script-word">a funkčnost</span></h2>
@@ -69,7 +76,7 @@
   </div>
 
   <div class="wrap feature-block reverse">
-    <div class="feature-media"><img src="jezek.webp" alt="Vnitřek sudové udírny s otočným systémem" loading="lazy" decoding="async"></div>
+    <div class="feature-media"><img src="jezek.avif" alt="Vnitřek sudové udírny s otočným systémem" width="1000" height="1333" loading="lazy" decoding="async"></div>
     <div class="feature-text">
       <div class="eyebrow">Snadná údržba</div>
       <h2>Promyšlená <span class="script-word">i zevnitř</span></h2>
@@ -100,9 +107,9 @@
   <div class="wrap">
     <div class="products-heading"><div class="eyebrow">Naše nabídka</div><h2 class="center">Vyberte si svou udírnu</h2></div>
     <div class="cards">
-      <article><img src="bezpng.webp" alt="Udírna bez generátoru"><h3>Udírna bez generátoru</h3><p>Pro ty, kteří mají generátor kouře vlastní.</p><ul><li>Udírna 224 l</li><li>Kolečka a madlo</li><li>Odnímatelné dno</li><li>Teploměr</li></ul><div class="card-bottom"><strong>19 000 Kč</strong><a class="btn outline" href="#kontakt">Mám zájem</a></div></article>
-      <article class="featured"><span class="badge">Doporučujeme</span><img src="sgenpng.webp" alt="Udírna s generátorem"><h3>Udírna s generátorem</h3><p>Kompletní řešení připravené k okamžitému uzení.</p><ul><li>Udírna 224 l</li><li>Podstavec</li><li>Generátor kouře</li><li>Elektrická spirála</li></ul><div class="card-bottom"><strong>od 26 000 Kč</strong><a class="btn outline" href="#kontakt">Mám zájem</a></div></article>
-      <article><img src="podstavecpng.webp" alt="Podstavec k udírně"><h3>Podstavec</h3><p>Stabilní a praktický doplněk pro vaši udírnu.</p><ul><li>Pevná konstrukce</li><li>Kolečka pro snadný přesun</li><li>Stabilní provedení</li></ul><div class="card-bottom"><strong>5 000 Kč</strong><a class="btn outline" href="#kontakt">Mám zájem</a></div></article>
+      <article><img src="bezpng.avif" alt="Udírna bez generátoru" width="1122" height="1402" loading="lazy" decoding="async"><h3>Udírna bez generátoru</h3><p>Pro ty, kteří mají generátor kouře vlastní.</p><ul><li>Udírna 224 l</li><li>Kolečka a madlo</li><li>Odnímatelné dno</li><li>Teploměr</li></ul><div class="card-bottom"><strong>19 000 Kč</strong><a class="btn outline" href="#kontakt">Mám zájem</a></div></article>
+      <article class="featured"><span class="badge">Doporučujeme</span><img src="sgenpng.avif" alt="Udírna s generátorem" width="1122" height="1402" loading="lazy" decoding="async"><h3>Udírna s generátorem</h3><p>Kompletní řešení připravené k okamžitému uzení.</p><ul><li>Udírna 224 l</li><li>Podstavec</li><li>Generátor kouře</li><li>Elektrická spirála</li></ul><div class="card-bottom"><strong>od 26 000 Kč</strong><a class="btn outline" href="#kontakt">Mám zájem</a></div></article>
+      <article><img src="podstavecpng.avif" alt="Podstavec k udírně" width="1122" height="1402" loading="lazy" decoding="async"><h3>Podstavec</h3><p>Stabilní a praktický doplněk pro vaši udírnu.</p><ul><li>Pevná konstrukce</li><li>Kolečka pro snadný přesun</li><li>Stabilní provedení</li></ul><div class="card-bottom"><strong>5 000 Kč</strong><a class="btn outline" href="#kontakt">Mám zájem</a></div></article>
     </div>
   </div>
 </section>
@@ -150,6 +157,6 @@
   <div class="wrap footer-bottom"><span>© 2026 Udíme v sudu</span><a href="#top">Zpět nahoru ↑</a></div>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>
