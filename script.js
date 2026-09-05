@@ -40,39 +40,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
       event.preventDefault();
       cancelAnimationFrame(scrollAnimation);
+      // Menu closing changes layout. Measure in the next frame, after that write
+      // has been committed, to avoid a synchronous forced layout on mobile links.
+      scrollAnimation = requestAnimationFrame(() => {
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const sectionGap = window.matchMedia("(max-width: 900px)").matches ? 24 : 40;
+        const headerOffset = header.offsetHeight + sectionGap;
+        const targetY = hash === "#top"
+          ? 0
+          : Math.max(0, target.getBoundingClientRect().top + window.scrollY - headerOffset);
 
-      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const sectionGap = window.matchMedia("(max-width: 900px)").matches ? 24 : 40;
-      const headerOffset = header.offsetHeight + sectionGap;
-      const targetY = hash === "#top"
-        ? 0
-        : Math.max(0, target.getBoundingClientRect().top + window.scrollY - headerOffset);
-
-      if (reduceMotion) {
-        window.scrollTo(0, targetY);
-        history.pushState(null, "", hash);
-        return;
-      }
-
-      const startY = window.scrollY;
-      const distance = targetY - startY;
-      const duration = Math.min(1050, Math.max(600, Math.abs(distance) * 0.42));
-      const startTime = performance.now();
-      const easeInOutCubic = (progress) => progress < .5
-        ? 4 * progress * progress * progress
-        : 1 - Math.pow(-2 * progress + 2, 3) / 2;
-
-      const animateScroll = (time) => {
-        const progress = Math.min((time - startTime) / duration, 1);
-        window.scrollTo(0, startY + distance * easeInOutCubic(progress));
-        if (progress < 1) {
-          scrollAnimation = requestAnimationFrame(animateScroll);
-        } else {
+        if (reduceMotion) {
+          window.scrollTo(0, targetY);
           history.pushState(null, "", hash);
+          return;
         }
-      };
 
-      scrollAnimation = requestAnimationFrame(animateScroll);
+        const startY = window.scrollY;
+        const distance = targetY - startY;
+        const duration = Math.min(1050, Math.max(600, Math.abs(distance) * 0.42));
+        const startTime = performance.now();
+        const easeInOutCubic = (progress) => progress < .5
+          ? 4 * progress * progress * progress
+          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+        const animateScroll = (time) => {
+          const progress = Math.min((time - startTime) / duration, 1);
+          window.scrollTo(0, startY + distance * easeInOutCubic(progress));
+          if (progress < 1) {
+            scrollAnimation = requestAnimationFrame(animateScroll);
+          } else {
+            history.pushState(null, "", hash);
+          }
+        };
+
+        scrollAnimation = requestAnimationFrame(animateScroll);
+      });
     });
   });
 
