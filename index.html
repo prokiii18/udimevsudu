@@ -77,7 +77,8 @@ body,p,li,a,button,input,textarea,select,.eyebrow{font-family:Inter,Arial,sans-s
 .btn{position:relative;overflow:hidden;isolation:isolate}
 .btn::after{content:"";position:absolute;z-index:-1;top:-30%;bottom:-30%;left:-65%;width:35%;background:rgba(255,255,255,.2);transform:skewX(-22deg);transition:left .65s cubic-bezier(.22,1,.36,1)}
 .btn:hover::after{left:130%}
-.hero-copy h1,.hero-copy p,.hero-copy .actions{animation:hero-enter .9s both cubic-bezier(.22,1,.36,1)}
+/* Keep the LCP heading visible from the first paint. */
+.hero-copy p,.hero-copy .actions{animation:hero-enter .9s both cubic-bezier(.22,1,.36,1)}
 .hero-copy p{animation-delay:.12s}.hero-copy .actions{animation-delay:.22s}
 @keyframes hero-enter{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 
@@ -234,22 +235,16 @@ section[id],main[id]{scroll-margin-top:88px}
   .hero .actions{display:grid;width:100%;max-width:none;grid-template-columns:1fr;gap:10px;margin-top:22px}
   .hero .actions .btn{min-height:48px;padding:8px 10px;font-size:10px;line-height:1.25}
   .hero-discover{bottom:24px;gap:4px}
-  .hero-copy h1{animation:none}
-  .hero-line{animation:mobile-hero-line .7s both cubic-bezier(.22,1,.36,1)}
-  .hero-line:nth-child(2){animation-delay:.1s}
-  .hero-line:nth-child(3){animation-delay:.2s}
   .hero-copy p{animation-delay:.36s}
   .hero-copy .actions{animation-delay:.52s}
 }
 
-@keyframes mobile-hero-line{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 
 @media(max-width:360px){
   .hero-copy{padding:72px 8px 130px}
   .hero .actions .btn{min-height:44px}
 }
 
-@media(prefers-reduced-motion:reduce){.hero-line{animation:none}}
 
 /* Lucide checks and refined separators */
 .feature-check{flex:0 0 auto;width:31px;height:31px;padding:7px;border:1px solid rgba(165,111,41,.28);border-radius:50%;background:#f6efe2;fill:none;stroke:#9b6527;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
